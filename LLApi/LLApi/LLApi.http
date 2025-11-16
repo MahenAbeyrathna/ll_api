@@ -1,0 +1,6 @@
+@LLApi_HostAddress = http://localhost:5007
+
+GET {{LLApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
