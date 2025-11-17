@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace DataAPI.Controllers
 {
@@ -7,7 +8,7 @@ namespace DataAPI.Controllers
     public class JobsController : ControllerBase
     {
         [HttpGet]
-        public IActionResult Get(Guid organizationId)
+        public IActionResult Get([FromQuery]Guid organizationId)
         {
             var result = new List<OrganizationJobs>
             {
@@ -62,8 +63,8 @@ namespace DataAPI.Controllers
                     } 
                 }
             };
-
-            return  Ok(result.Where(r=> r.OrganizationId == organizationId).FirstOrDefault());
+            var response = result.Where(r => r.OrganizationId == organizationId).Select(r => r.JobList).FirstOrDefault();
+            return  Ok(JsonConvert.SerializeObject(response));
         }
     }
 }

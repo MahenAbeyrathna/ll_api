@@ -9,7 +9,7 @@ namespace Infrastructure.Data.JobService.JobsByOrganizationIdService
         private readonly string _connectionString;
         public DbJobsByOrganizationIdService(IConfiguration config)
         {
-            _connectionString = config.GetConnectionString("DefaultConnection");
+            _connectionString = config.GetConnectionString("SqlServer");
         }
         public async Task<List<Job>> GetOrganizationJobsAsync(Guid organizationId)
         {
@@ -19,7 +19,7 @@ namespace Infrastructure.Data.JobService.JobsByOrganizationIdService
                 await conn.OpenAsync();
 
                 string sql = @"
-                SELECT JobId, Title, Description, CreatedDateTime, IsDeleted 
+                SELECT Id, Title, Description, CreatedDateTime, IsDeleted ,ExternalId
                 FROM Jobs
                 WHERE OrganizationId = @OrganizationId";
 
@@ -33,7 +33,8 @@ namespace Infrastructure.Data.JobService.JobsByOrganizationIdService
                         {
                             result.Add(new Job
                             {
-                                JobId = reader.GetGuid(reader.GetOrdinal("JobId")),
+                                JobId = reader.GetGuid(reader.GetOrdinal("Id")),
+                                ExternalId = reader.GetGuid(reader.GetOrdinal("ExternalId")),
                                 Title = reader.GetString(reader.GetOrdinal("Title")),
                                 Description = reader.GetString(reader.GetOrdinal("Description")),
                                 CreatedDateTime = reader.GetDateTime(reader.GetOrdinal("CreatedDateTime")),

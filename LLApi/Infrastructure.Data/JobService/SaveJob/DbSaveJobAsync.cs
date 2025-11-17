@@ -10,7 +10,7 @@ namespace Infrastructure.Data.JobService.SaveJob
         private readonly string _connectionString;
         public DbSaveJobAsync(IConfiguration config)
         {
-            _connectionString = config.GetConnectionString("DefaultConnection");
+            _connectionString = config.GetConnectionString("SqlServer");
         }
 
         public async Task<bool> SaveJobAsync(Job job, Guid organizationId)
@@ -23,7 +23,7 @@ namespace Infrastructure.Data.JobService.SaveJob
             VALUES (@Id,@ExternalId, @OrganizationId, @Title, @Description, @CreatedDateTime, @IsDeleted);";
 
             using SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@Id", new Guid());
+            cmd.Parameters.AddWithValue("@Id", Guid.NewGuid());
             cmd.Parameters.AddWithValue("@ExternalId", job.ExternalId);
             cmd.Parameters.AddWithValue("@OrganizationId", organizationId);
             cmd.Parameters.AddWithValue("@Title", job.Title);

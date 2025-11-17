@@ -1,0 +1,16 @@
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\bin\Debug\net8.0\LL.Infrastructure.Integrations.deps.json
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\bin\Debug\net8.0\LL.Infrastructure.Integrations.dll
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\bin\Debug\net8.0\LL.Infrastructure.Integrations.pdb
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\bin\Debug\net8.0\LL.Application.Common.dll
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\bin\Debug\net8.0\LL.Application.Common.pdb
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.csproj.AssemblyReference.cache
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.AssemblyInfoInputs.cache
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.AssemblyInfo.cs
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.csproj.CoreCompileInputs.cache
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.sourcelink.json
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infra.A81790BC.Up2Date
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.dll
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\refint\LL.Infrastructure.Integrations.dll
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\LL.Infrastructure.Integrations.pdb
+C:\Mahens\personal\2025 new\codes\liquidlabs\ll_api\LLApi\LL.Infrastructure.Integrations\obj\Debug\net8.0\ref\LL.Infrastructure.Integrations.dll

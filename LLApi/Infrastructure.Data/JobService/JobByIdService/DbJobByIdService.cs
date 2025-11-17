@@ -10,7 +10,7 @@ public class DbJobByIdService : IDbJobByIdService
     private readonly string _connectionString;
     public DbJobByIdService(IConfiguration config)
     {
-        _connectionString = config.GetConnectionString("DefaultConnection");
+        _connectionString = config.GetConnectionString("SqlServer");
     }
 
     public async Task<Job> GetJobByExternalIdAsync(Guid externalId)
@@ -21,7 +21,7 @@ public class DbJobByIdService : IDbJobByIdService
             await conn.OpenAsync();
 
             string sql = @"
-                SELECT Id, Title, Description, CreatedDateTime, IsDeleted 
+                SELECT Id, Title, Description, CreatedDateTime, IsDeleted ,ExternalId
                 FROM Jobs
                 WHERE ExternalId = @ExternalId";
 
@@ -46,7 +46,7 @@ public class DbJobByIdService : IDbJobByIdService
                 }
             }
         }
-        return result;
+        return result.JobId != Guid.Empty ? result : null;
     }
 
     public async Task<Job> GetJobByIdAsync(Guid jobId)

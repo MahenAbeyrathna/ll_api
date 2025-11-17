@@ -22,18 +22,18 @@ public class JobController : ControllerBase
 
 
     [HttpGet("job-by-id")]
-    public async Task<IActionResult> GetJobById([FromQuery] GetJobByIdQuery jobId)
+    public async Task<IActionResult> GetJobById([FromQuery] GetJobByIdQuery request)
     {
-        _logger.LogInformation($"JobId: {jobId},API called at {DateTime.UtcNow}");
-        var result = await _mediator.Send(jobId);
-        return Ok();
+        _logger.LogInformation($"JobId: {request.JobId},API called at {DateTime.UtcNow}");
+        var result = await _mediator.Send(request);
+        return Ok(result);
     }
 
-    [HttpGet("job-list-by-organization")]
-    public async Task<IActionResult> GetJobListByOrganization([FromQuery] GetJobListByOrganizationQuery organizationId)
+    [HttpGet("job-list-by-organization-id")]
+    public async Task<IActionResult> GetJobListByOrganizationId([FromQuery] GetJobListByOrganizationQuery request)
     {
-        _logger.LogInformation($"OrganizationId: {organizationId},API called at {DateTime.UtcNow}");
-        var result = await _mediator.Send(organizationId);
-        return Ok();
+        _logger.LogInformation($"OrganizationId: {request.OrganizationId},API called at {DateTime.UtcNow}");
+        var result = await _mediator.Send(request);
+        return Ok(result);
     }
 }

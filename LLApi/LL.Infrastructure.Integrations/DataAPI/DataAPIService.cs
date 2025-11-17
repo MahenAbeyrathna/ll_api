@@ -25,11 +25,12 @@ public class DataAPIService : IDataService
             _logger.LogInformation($"Getting data  for organization {organizationId}");
             SetDefaultAuthorizationHeader(authorizationKey);
 
-            var response = await _httpClient.GetAsync($"{_config.DataAPIBaseUrl}/api/jobs?organizationId ={organizationId}");
+            var response = await _httpClient.GetAsync($"{_config.DataAPIBaseUrl}/api/jobs?OrganizationId={organizationId}");
             if (!response.IsSuccessStatusCode)
                 return new List<Job>();
 
             var result = await response.Content.ReadAsStringAsync();
+            _logger.LogInformation($"Getting data  for organization {organizationId} completed");
             return JsonSerializer.Deserialize<List<Job>>(result);
         }
         catch (Exception ex)

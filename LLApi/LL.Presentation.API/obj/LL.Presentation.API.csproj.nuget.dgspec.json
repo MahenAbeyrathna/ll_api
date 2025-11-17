@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\Mahens\\personal\\2025 new\\codes\\liquidlabs\\ll_api\\LLApi\\LL.Application.Common\\LL.Application.Common.csproj": {
                 "projectPath": "C:\\Mahens\\personal\\2025 new\\codes\\liquidlabs\\ll_api\\LLApi\\LL.Application.Common\\LL.Application.Common.csproj"
+              },
+              "C:\\Mahens\\personal\\2025 new\\codes\\liquidlabs\\ll_api\\LLApi\\LL.Infrastructure.Integrations\\LL.Infrastructure.Integrations.csproj": {
+                "projectPath": "C:\\Mahens\\personal\\2025 new\\codes\\liquidlabs\\ll_api\\LLApi\\LL.Infrastructure.Integrations\\LL.Infrastructure.Integrations.csproj"
               }
             }
           }
@@ -66,7 +69,19 @@
               "target": "Package",
               "version": "[10.0.0, )"
             },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[10.0.0, )"
             }
@@ -290,10 +305,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MediatR": {
-              "target": "Package",
-              "version": "[13.1.0, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -375,11 +386,15 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MediatR": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[13.1.0, )"
+              "version": "[11.1.0, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[10.0.0, )"
             }
